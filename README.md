@@ -5,7 +5,7 @@ Just download the Script and place it in the directory that contains the music y
 
 ```
 
-PS C:\WINDOWS\system32>  ."C:\<Path to Script and Music Files>\Ibroadcast Uploader.ps1" "<authentication token>"
+PS C:\WINDOWS\system32>  ."C:\<Path>\Ibroadcast Uploader.ps1" "<authentication token>"
 
 Logging in...
 Login successful
