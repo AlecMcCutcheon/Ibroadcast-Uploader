@@ -7,7 +7,7 @@ Just download the Script and place it in the directory that contains the music y
 
 PS C:\WINDOWS\system32>  ."C:\<Path>\Ibroadcast Uploader.ps1" "<Authentication Token>"
 Logging in...
-Login: Token Was Vaild, Login successful
+Login: Token was vaild, login successful
 Getting Status ...
 Status: Uploader connected to account: <Account Email>
 
