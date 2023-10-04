@@ -37,7 +37,7 @@ function Login {
     $script:userId = $ResponseContent.user.id
     $script:userToken = $ResponseContent.user.token
 
-    Write-Host "Login: Token Was Vaild, Login successful"
+    Write-Host "Login: Token was vaild, login successful"
   }
   catch {
     Write-Host "$($MyInvocation.MyCommand.Name) failed. Please check your authentication token. Exception: $($_.Exception.Message)"
