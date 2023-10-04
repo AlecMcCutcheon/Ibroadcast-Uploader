@@ -5,12 +5,11 @@ Just download the Script and place it in the directory that contains the music y
 
 ```
 
-PS C:\WINDOWS\system32>  ."C:\<Path>\Ibroadcast Uploader.ps1" "<authentication token>"
-
+PS C:\WINDOWS\system32>  ."C:\<Path>\Ibroadcast Uploader.ps1" "<Authentication Token>"
 Logging in...
-Login successful
+Login: Token Was Vaild, Login successful
 Getting Status ...
-Status successful
+Status: Uploader connected to account: <Account Email>
 
 Found 19 files. Press 'L' for listing and 'U' for uploading
 
