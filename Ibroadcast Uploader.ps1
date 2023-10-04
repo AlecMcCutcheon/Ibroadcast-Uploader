@@ -1,4 +1,4 @@
-﻿param(
+param(
 
   [string]$loginToken = $null
 
@@ -37,7 +37,7 @@ function Login {
     $script:userId = $ResponseContent.user.id
     $script:userToken = $ResponseContent.user.token
 
-    Write-Host "Login successful"
+    Write-Host "Login: Token Was Vaild, Login successful"
   }
   catch {
     Write-Host "$($MyInvocation.MyCommand.Name) failed. Please check your authentication token. Exception: $($_.Exception.Message)"
@@ -85,7 +85,7 @@ function Status {
       }
     }
 
-    Write-Host "Status successful"
+    Write-Host "Status: Uploader connected to account: $($ResponseContent.user.email_address)"
   }
   catch {
     Write-Host "$($MyInvocation.MyCommand.Name) failed. Exception: $($_.Exception.Message)"
@@ -256,10 +256,23 @@ if ($loginToken -eq $null -or $loginToken -eq "") {
     $md5s = @()
     $mediaFilesQ = @()
 
-    Login
-    Status
-    GetMD5
-    $script:mediaFilesQ = loadMediaFilesQ $RootFolder
-    ExecuteOptions
+    Function Main {
+        Login
+        if ($script:userId -and $script:userToken) {
+            Status
+            GetMD5
+            $script:mediaFilesQ = loadMediaFilesQ $RootFolder
+            ExecuteOptions
+        }else {
+            $script:loginToken = Read-Host "Please enter a valid token or Leave blank to exit"
+            if ($script:loginToken -or $script:loginToken -ne "") {
+                Main
+            }else{
+                Exit
+            }
+        }
+    }
+
+    Main
 
 }
