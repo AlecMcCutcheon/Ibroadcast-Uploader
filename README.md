@@ -9,7 +9,7 @@ PS C:\WINDOWS\system32>  ."C:\<Path>\Ibroadcast Uploader.ps1" "<Authentication T
 Logging in...
 Login: Token was vaild, login successful
 Getting Status ...
-Status: Uploader connected to account: <Account Email>
+Status: Uploader connected to account: [Shows Account Email]
 
 Found 19 files. Press 'L' for listing and 'U' for uploading
 
